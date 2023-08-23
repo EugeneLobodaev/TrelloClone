@@ -422,7 +422,10 @@ import { createMyComponent } from './components/index.js'
 
 ```javascript
 // app.js
-import { createMyComponent } from './components/index.js'
+import {
+  createMyComponent,
+  setHandlersMyComponent,
+} from './components/index.js'
 
 const main = () => {
   someElement.append(createMyComponent())
