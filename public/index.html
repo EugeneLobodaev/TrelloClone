@@ -21,6 +21,37 @@
         <h1 class="header__logo">Trello Clone</h1>
         <time class="header__clock" id="time">00:00:00</time>
       </header>
+      <main class="tasks">
+        <section class="tasksstage" id="todo-stage">
+          <header class="tasksheader">
+            <h2 class="taskstitle">TODO:</h2>
+            <p class="taskscount" id="todo-items-count">0</p>
+          </header>
+
+          <ul class="taskslist"></ul>
+
+          <button class="tasksbutton">Add New Task</button>
+        </section>
+
+        <section class="tasksstage" id="in-progress-stage">
+          <header class="tasksheader">
+            <h2 class="taskstitle">IN PROGRESS:</h2>
+            <p class="taskscount" id="in-progress-items-count">0</p>
+          </header>
+
+          <ul class="taskslist"></ul>
+        </section>
+
+        <section class="tasksstage" id="done-stage">
+          <header class="tasksheader">
+            <h2 class="taskstitle">DONE:</h2>
+            <p class="taskscount" id="done-items-count">0</p>
+          </header>
+
+          <ul class="taskslist"></ul>
+          <button class="tasks__button">Delete All</button>
+        </section>
+      </main>
     </div>
   </body>
 </html>

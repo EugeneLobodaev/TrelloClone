@@ -1,0 +1,48 @@
+.tasks {
+    padding: 50px 0px;
+  
+    @include flexWrap();
+    gap: 20px;
+  
+    &stage {
+      border: $border;
+      flex-grow: 1;
+      border-end-end-radius: $border-radius;
+      border-end-start-radius: $border-radius;
+      overflow: hidden;
+      flex-basis: 30%;
+  
+      &[id='todo-stage'] {
+        background-color: $todo-stage;
+      }
+  
+      &[id='in-progress-stage'] {
+        background-color: $in-progress-stage;
+      }
+  
+      &[id='done-stage'] {
+        background-color: $done-stage;
+      }
+    }
+  
+    &header {
+      @include flexWrap(space-between, center);
+      padding: 20px 10px;
+      font-weight: bold;
+      background-color: inherit;
+    }
+  
+    &list {
+      padding: 10px;
+      background-color: $bg-color;
+      &-item {
+        margin-bottom: 15px;
+      }
+    }
+  
+    &button {
+      padding: 10px;
+      width: 100%;
+      text-align: center;
+    }
+  }
