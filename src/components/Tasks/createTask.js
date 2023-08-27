@@ -11,7 +11,7 @@ export function createTask(task) {
   taskHeader.className = `task__header`
 
   const taskTitle = document.createElement(`h3`)
-  taskTitle.className = `task_title`
+  taskTitle.className = `task__title`
   taskTitle.textContent = task.title
 
   const taskButtonsWrapper = document.createElement(`div`)

@@ -1,6 +1,9 @@
 import './scss/index.scss'
-import { updateTime } from '../src/scripts/services/clock.js'
+import tasks from '../tasksPlaceholdes'
+import { updateTime, renderTasks } from '../src/scripts/services/index'
 const main = () => {
   updateTime()
+  renderTasks(tasks)
+
 }
 export default main
