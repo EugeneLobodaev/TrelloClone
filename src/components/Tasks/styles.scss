@@ -5,7 +5,7 @@
 
   &__header,
   &__footer,
-  &__description {
+  .task__desctription {
     padding: 15px;
   }
 
@@ -30,8 +30,9 @@
     font-weight: inherit;
     background-color: $button-color;
   }
-  &__description {
+  .task__desctription {
     text-align: justify;
+
   }
   &__footer {
     @include flexWrap(space-between, center);
