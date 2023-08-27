@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
 
 .container {
   max-width: 1220px;
@@ -40,23 +40,23 @@ button {
   }
 }
 
-.tasksstage {
+.tasks__stage {
   &[id='todo-stage'] {
-    .taskheader,
-    .taskfooter {
+    .task__header,
+    .task__footer {
       background-color: $todo-stage;
     }
   }
 
   &[id='in-progress-stage'] {
-    .taskheader,
-    .taskfooter {
+    .task__header,
+    .task__footer {
       background-color: $in-progress-stage;
     }
   }
 
   &[id='done-stage'] {
-    .taskheader,
+    .task__header,
     .task__footer {
       background-color: $done-stage;
     }
