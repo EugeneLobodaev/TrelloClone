@@ -1,0 +1,74 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+
+  &__content {
+    border: $border;
+    background-color: $bg-color;
+    border-radius: $border-radius;
+    max-width: 600px;
+    padding: 30px;
+    word-wrap: normal;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    &[data-modal-type='warning'] {
+      text-align: center;
+    }
+    &[data-modal-type='create'],
+    &[data-modal-type='edit'] {
+      max-width: 800px;
+      @include flexWrap();
+      flex-direction: column;
+    }
+  }
+
+  &__controls {
+    width: 100%;
+    @include flexWrap(space-between, center);
+    gap: 2rem;
+  }
+
+  &__button {
+    padding: 10px 20px;
+    border: $border;
+    background-color: $primary-color;
+    border-radius: $border-radius;
+  }
+
+  &__title {
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
+  }
+
+  &__text {
+    margin-bottom: 1.5rem;
+    width: 100%;
+  }
+
+  &__select {
+    border: $border;
+    border-radius: $border-radius;
+    padding: 10px 20px;
+    margin-right: auto;
+    background-color: #fff;
+
+    padding-right: 1.8em;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23000' width='18px' height='18px'%3E%3Cpath d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: 95% center;
+    max-width: 350px;
+
+    &::selection {
+      background: $primary-color;
+    }
+  }
+}
