@@ -4,7 +4,7 @@
     @include flexWrap();
     gap: 20px;
   
-    &stage {
+    &__stage {
       border: $border;
       flex-grow: 1;
       border-end-end-radius: $border-radius;
@@ -25,14 +25,14 @@
       }
     }
   
-    &header {
+    &__header {
       @include flexWrap(space-between, center);
       padding: 20px 10px;
       font-weight: bold;
       background-color: inherit;
     }
   
-    &list {
+    &__list {
       padding: 10px;
       background-color: $bg-color;
       &-item {
@@ -40,7 +40,7 @@
       }
     }
   
-    &button {
+    &__button {
       padding: 10px;
       width: 100%;
       text-align: center;
