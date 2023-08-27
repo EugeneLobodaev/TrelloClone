@@ -1,0 +1,39 @@
+@import '../../scss/config/index.scss';
+
+.task {
+  border: $border;
+
+  &__header,
+  &__footer,
+  &__description {
+    padding: 15px;
+  }
+
+  &__header {
+    margin-bottom: 10px;
+    background-color: inherit;
+
+    font-weight: bold;
+  }
+  &__title {
+    margin-bottom: 20px;
+  }
+  &__controls {
+    @include flexWrap(space-between, center);
+    gap: 20px;
+  }
+  &__btn {
+    border: $border;
+    border-radius: $border-radius;
+    text-align: center;
+    padding: 5px 10px;
+    font-weight: inherit;
+    background-color: $button-color;
+  }
+  &__description {
+    text-align: justify;
+  }
+  &__footer {
+    @include flexWrap(space-between, center);
+  }
+}

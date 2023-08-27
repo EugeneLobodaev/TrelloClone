@@ -1,26 +1,53 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="shortcut icon"
-      href="./assets/icons/favicon.ico"
-      type="image/x-icon"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap"
-      rel="stylesheet"
-    />
-    <script src="./main.js" type="module"></script>
-    <title>Trello Clone</title>
-  </head>
-  <body>
-    <div class="container">
-      <header class="header">
-        <h1 class="header__logo">Trello Clone</h1>
-        <time class="header__clock" id="time">00:00:00</time>
-      </header>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="shortcut icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+  <link href="https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap" rel="stylesheet" />
+  <script src="./main.js" type="module"></script>
+  <title>Trello Clone</title>
+</head>
+
+<body>
+  <div class="container">
+    <header class="header">
+      <h1 class="header__logo">Trello Clone</h1>
+      <time class="header__clock" id="time">00:00:00</time>
+    </header>
+    <main class="tasks">
+      <section class="tasks__stage" id="todo-stage">
+        <header class="tasks__header">
+          <h2 class="tasks__title">TODO:</h2>
+          <p class="tasks__count" id="todo-items-count">0</p>
+        </header>
+
+        <ul class="tasks__list"></ul>
+
+        <button class="tasks__button">Add New Task</button>
+      </section>
+
+      <section class="tasks__stage" id="in-progress-stage">
+        <header class="tasks__header">
+          <h2 class="tasks__title">IN PROGRESS:</h2>
+          <p class="tasks__count" id="in-progress-items-count">0</p>
+        </header>
+
+        <ul class="tasks__list"></ul>
+      </section>
+
+      <section class="tasks__stage" id="done-stage">
+        <header class="tasks__header">
+          <h2 class="tasks__title">DONE:</h2>
+          <p class="tasks__count" id="done-items-count">0</p>
+        </header>
+
+        <ul class="tasks__list"></ul>
+        <button class="tasks__button">Delete All</button>
+      </section>
+    </main>
+  </div>
+</body>
+
 </html>
