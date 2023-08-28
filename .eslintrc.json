@@ -11,6 +11,7 @@
   },
   "ignorePatterns": ["**/node_modules/**", "**/dist/**"],
   "rules": {
+    "no-case-declarations": "off",
     "space-before-function-paren": "off",
     "prettier/prettier": [
       "warn",
