@@ -4,7 +4,7 @@ import htmlMinifier from 'vite-plugin-html-minifier'
 export default defineConfig({
   root: './public',
   hot: true,
-  base: '/',
+  base: './',
 
   css: {
     preprocessor: 'scss',
