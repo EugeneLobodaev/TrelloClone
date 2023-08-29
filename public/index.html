@@ -47,7 +47,7 @@
         <button class="tasks__button">Delete All</button>
       </section>
     </main>
-    <aside id="modal-window" class="modal">
+    <aside id="modal-window-warning" class="modal">
       <div class="modal__content" data-modal-type="warning">
         <h2 class="modal__title">Warning!</h2>
         <p class="modal__text">ti pidor</p>
@@ -57,8 +57,8 @@
         </div>
       </div>
     </aside>
-    <aside id="modal-window" class="modal">
-      <form class="modal__content" data-modal-type="create">
+    <aside id="modal-window-manage" class="modal">
+      <form class="modal__content" data-modal-type="manageTask">
         <input class="modal__title" placeholder="Enter task title" type='text'></input>
         <textarea class="modal__text" placeholder="Enter task" rows="5"></textarea>
         <div class="modal__controls">
@@ -70,9 +70,6 @@
           <button class="modal__button" type="submit">Assign</button>
         </div>
       </form>
-    </aside>
-    <aside>
-      <div data-modal-type="edit"></div>
     </aside>
   </div>
 </body>

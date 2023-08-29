@@ -23,8 +23,7 @@
     &[data-modal-type='warning'] {
       text-align: center;
     }
-    &[data-modal-type='create'],
-    &[data-modal-type='edit'] {
+    &[data-modal-type='manageTask'] {
       max-width: 800px;
       @include flexWrap();
       flex-direction: column;
