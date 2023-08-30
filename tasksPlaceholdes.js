@@ -1,4 +1,4 @@
-const tasks = [
+export const tasks = [
   {
     id: self.crypto.randomUUID(),
     title: 'lorem ipsum dolor',
