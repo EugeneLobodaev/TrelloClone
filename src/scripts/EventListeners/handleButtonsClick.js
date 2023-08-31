@@ -1,5 +1,7 @@
 import { editTask } from '../services/editTask.js'
 import { removeTask } from '../services/removeTask.js'
+import { renderTasks } from '../services/renderTasks.js'
+import tasks from '../../../tasksPlaceholdes.js'
 
 export const handleButtonsClick = event => {
   const { target } = event
@@ -27,4 +29,5 @@ export const handleButtonsClick = event => {
       console.log(`completed`)
       break
   }
+  renderTasks(tasks)
 }
