@@ -13,7 +13,7 @@
 <body>
   <div class="container">
     <header class="header">
-      <h1 class="header__logo">Trello Clone</h1>
+      <h1 class="header__logo">Trello</h1>
       <time class="header__clock" id="time">00:00:00</time>
     </header>
     <main class="tasks">
@@ -47,7 +47,7 @@
         <button class="tasks__button">Delete All</button>
       </section>
     </main>
-    <aside id="modal-window-warning" class="modal">
+    <aside id="modal-window-warning" class="modal" hidden>
       <div class="modal__content" data-modal-type="warning">
         <h2 class="modal__title">Warning!</h2>
         <p class="modal__text">ti pidor</p>
@@ -57,7 +57,7 @@
         </div>
       </div>
     </aside>
-    <aside id="modal-window-manage" class="modal">
+    <aside id="modal-window-manage" class="modal" hidden>
       <form class="modal__content" data-modal-type="manageTask">
         <input class="modal__title" placeholder="Enter task title" type='text'></input>
         <textarea class="modal__text" placeholder="Enter task" rows="5"></textarea>
@@ -66,7 +66,7 @@
             <option value="null">--Select user--</option>
             <option value="null">Lobodaev</option>
           </select>
-          <button class="modal__button" type="button">Close</button>
+          <button class="modal__button--close" type="button">Close</button>
           <button class="modal__button" type="submit">Assign</button>
         </div>
       </form>

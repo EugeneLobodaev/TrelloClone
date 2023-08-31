@@ -1,4 +1,5 @@
-import { handleButtonsClick } from '../../components/EventListeners/handleButtonsClick.js'
+import { handleButtonsClick } from '../EventListeners/handleButtonsClick.js'
+
 export const setClickTaskButtons = () => {
   const tasks = document.querySelectorAll(`.task`)
   tasks.forEach(taskCard => {
