@@ -1,5 +1,4 @@
 import { createTask } from '../../components/index.js'
-import tasks from '../../../tasksPlaceholdes.js'
 
 export function renderTasks(tasks) {
   const unassignedTasks = tasks.filter(task => task.stage === `todo`)
@@ -22,4 +21,3 @@ export function renderTasks(tasks) {
     completedStage.append(createTask(task))
   })
 }
-renderTasks(tasks)
