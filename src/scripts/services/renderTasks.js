@@ -1,5 +1,6 @@
 import { createTask } from '../../components/index.js'
 import { setClickTaskButtons } from './setHandlers.js'
+import { updateCounters } from './updateCounters.js'
 
 export function renderTasks(tasks) {
   const unassignedTasks = tasks.filter(task => task.stage === `todo`)
@@ -22,4 +23,5 @@ export function renderTasks(tasks) {
     completedStage.append(createTask(task))
   })
   setClickTaskButtons()
+  updateCounters(tasks)
 }
