@@ -31,15 +31,22 @@ export const handleButtonsClick = event => {
       break
     case `completed`:
       completeTask(id)
-      console.log(`completed`)
-      break
-    case `assign-new`:
-      assignTask()
-      break
-    case `delete-all`:
-      deleteAllTasks()
       break
   }
   console.log(tasks)
   renderTasks(tasks)
+}
+export const addNewTask = () => {
+  const addNewTask = document.querySelector(`#add-new-task`)
+  addNewTask.addEventListener(`click`, () => {
+    assignTask()
+    renderTasks(tasks)
+  })
+}
+export const deleteAll = () => {
+  const deleteAll = document.querySelector(`#tasks-delete-all`)
+  deleteAll.addEventListener(`click`, () => {
+    deleteAllTasks()
+    renderTasks(tasks)
+  })
 }

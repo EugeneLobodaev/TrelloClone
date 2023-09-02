@@ -1,4 +1,5 @@
 import { createTask } from '../../components/index.js'
+import { setClickTaskButtons } from './setHandlers.js'
 
 export function renderTasks(tasks) {
   const unassignedTasks = tasks.filter(task => task.stage === `todo`)
@@ -20,4 +21,5 @@ export function renderTasks(tasks) {
   completedTasks.forEach(task => {
     completedStage.append(createTask(task))
   })
+  setClickTaskButtons()
 }
