@@ -20,8 +20,7 @@ export const handleButtonsClick = event => {
       startTask(id)
       break
     case `edit`:
-      console.log(`edit`)
-      showModalEdit()
+      showModalEdit(id)
       break
     case `save`:
       editTask(id)

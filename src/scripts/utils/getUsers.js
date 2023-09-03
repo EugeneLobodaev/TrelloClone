@@ -20,3 +20,15 @@ export async function userList() {
     })
   })
 }
+
+export async function userListEdit() {
+  const userOption = document.querySelector(`#modal-select-edit`)
+  userOption.addEventListener(`click`, async () => {
+    const users = await getUserNames()
+    users.forEach(user => {
+      const userItem = document.createElement(`option`)
+      userItem.textContent = user
+      userOption.append(userItem)
+    })
+  })
+}

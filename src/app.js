@@ -10,7 +10,7 @@ import {
   deleteAll,
 } from './scripts/EventListeners/handleButtonsClick'
 import tasks from '../tasksPlaceholdes'
-import { userList } from './scripts/utils/getUsers.js'
+import { userList, userListEdit } from './scripts/utils/getUsers.js'
 const main = () => {
   updateTime()
   addNewTask()
@@ -19,6 +19,7 @@ const main = () => {
   updateCounters(tasks)
   assignButton()
   userList()
+  userListEdit()
 }
 
 export default main

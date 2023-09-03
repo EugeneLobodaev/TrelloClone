@@ -71,10 +71,10 @@
     </aside>
     <aside id="modal-window-edit" class="modal" hidden>
       <form class="modal__content" data-modal-type="manageTask">
-        <input class="modal__title" placeholder="Enter task title" type='text'></input>
-        <textarea class="modal__text" placeholder="Enter task" rows="5"></textarea>
+        <input class="modal__title" id="modal-title-edit" placeholder="Enter task title" type='text'></input>
+        <textarea class="modal__text" id="modal-text-edit" placeholder="Enter task" rows="5"></textarea>
         <div class="modal__controls">
-          <select class="modal__select">
+          <select class="modal__select" id="modal-select-edit">
           </select>
           <button class="modal__button--discard" type="button">Close</button>
           <button class="modal__button" type="submit" id="modal-button-edit" name="save">Save</button>
