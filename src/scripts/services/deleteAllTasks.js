@@ -1,10 +1,11 @@
 import tasks from '../../../tasksPlaceholdes'
+import { setLocalStorage } from '../utils/localStorage'
 
 export const deleteAllTasks = () => {
-  const completeTask = tasks.find(obj => obj.stage === `done`)
-  if (completeTask !== undefined) {
-    tasks.forEach(() => {
-      tasks.splice(tasks.indexOf(completeTask), 1)
-    })
-  }
+  const completedTasks = tasks.filter(task => task.stage === 'done')
+
+  completedTasks.forEach(task => {
+    tasks.splice(tasks.indexOf(task), 1)
+    setLocalStorage(`tasks`, tasks)
+  })
 }

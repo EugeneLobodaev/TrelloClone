@@ -6,6 +6,8 @@ import tasks from '../../../tasksPlaceholdes.js'
 import { unassignTask } from '../services/unassignTask.js'
 import { completeTask } from '../services/completeTask.js'
 import { deleteAllTasks } from '../services/deleteAllTasks.js'
+import { startTask } from '../services/startTask.js'
+import { getLocalStorage } from '../utils/localStorage.js'
 
 export const handleButtonsClick = event => {
   const { target } = event
@@ -14,12 +16,11 @@ export const handleButtonsClick = event => {
 
   switch (name) {
     case `assign`:
-      console.log(`assign`)
-      assignTask()
+      startTask(id)
       break
     case `edit`:
       console.log(`edit`)
-      editTask()
+      editTask(id)
       break
     case `delete`:
       removeTask(id)
@@ -33,14 +34,13 @@ export const handleButtonsClick = event => {
       completeTask(id)
       break
   }
-  console.log(tasks)
+  const tasks = getLocalStorage(`tasks`)
   renderTasks(tasks)
 }
 export const addNewTask = () => {
   const addNewTask = document.querySelector(`#add-new-task`)
   addNewTask.addEventListener(`click`, () => {
     assignTask()
-    renderTasks(tasks)
   })
 }
 export const deleteAll = () => {

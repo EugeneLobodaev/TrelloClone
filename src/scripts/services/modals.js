@@ -5,9 +5,14 @@ export const showModal = () => {
 
 const modalButtonClose = document.querySelector(`.modal__button--close`)
 modalButtonClose.addEventListener(`click`, () => {
-  // const modalForm = document.getElementsByClassName(`modal__content`)
-  // modalForm.reset()
   showModal()
 })
 
-export const submitChanges = () => {}
+export const showModalEdit = () => {
+  const showModalEdit = document.querySelector(`#modal-window-edit`)
+  showModalEdit.toggleAttribute(`hidden`)
+}
+const modalButtonCloseEdit = document.querySelector(`.modal__button--discard`)
+modalButtonCloseEdit.addEventListener(`click`, () => {
+  showModalEdit()
+})

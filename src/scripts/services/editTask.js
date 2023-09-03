@@ -1,18 +1,25 @@
-import { showModal } from './modals.js'
+import tasks from '../../../tasksPlaceholdes.js'
+import { setLocalStorage } from '../utils/localStorage.js'
+import { renderTasks } from '../services/renderTasks.js'
+import { showModalEdit } from './modals.js'
 
 export const editTask = () => {
-  showModal()
-  const modalButtonSubmit = document.querySelector(`.modal__button`)
-  modalButtonSubmit.addEventListener(`submit`, event => {
-    // const taskHeader = document.querySelector(`.task__header`)
-    // const taskDescription = document.querySelector(`.task__description`)
-    // const taskFooter = document.querySelector(`.task__footer`)
-    // taskHeader.value = хедер таски
-    // taskDescription.value = дескрипшен
-    // taskFooter.value = значение даты и пользолвателя
-    // taskHeader = Инпуту хедера
-    // taskDescription = инпуту дескрипшена
-    // taskFooter = инпуту футера
-    // renderTasks()
+  showModalEdit()
+}
+export const saveButton = id => {
+  const saveButton = document.querySelector(`#modal-button-edit`)
+  const taskTitle = document.querySelector(`.modal__title`)
+  const taskText = document.querySelector(`.modal__text`)
+  const selectTaskUser = document.querySelector(`.modal__select`)
+
+  saveButton.addEventListener(`click`, () => {
+    const task = tasks.find(obj => obj.id === id)
+    if (task !== -1) {
+      task.title = taskTitle.value
+      task.description = taskText.value
+      task.user = selectTaskUser.value
+      setLocalStorage(`tasks`, tasks)
+      renderTasks(tasks)
+    }
   })
 }

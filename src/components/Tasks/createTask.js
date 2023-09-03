@@ -36,12 +36,13 @@ export function createTask(task) {
     const acceptButton = document.createElement(`button`)
     acceptButton.type = `button`
     acceptButton.className = `task__btn`
-    acceptButton.textContent = `Asign Task`
+    acceptButton.textContent = `Assign Task`
     acceptButton.name = `assign`
 
     const editButton = document.createElement(`button`)
     editButton.type = `button`
     editButton.className = `task__btn`
+    editButton.id = `task-button-edit`
     editButton.textContent = `Edit Task`
     editButton.name = `edit`
 
