@@ -1,4 +1,3 @@
-import { editTask } from '../services/editTask.js'
 import { removeTask } from '../services/removeTask.js'
 import { renderTasks } from '../services/renderTasks.js'
 import { assignTask } from '../services/assignTask.js'
@@ -8,6 +7,8 @@ import { completeTask } from '../services/completeTask.js'
 import { deleteAllTasks } from '../services/deleteAllTasks.js'
 import { startTask } from '../services/startTask.js'
 import { getLocalStorage } from '../utils/localStorage.js'
+import { showModalEdit } from '../services/modals.js'
+import { editTask } from '../services/editTask.js'
 
 export const handleButtonsClick = event => {
   const { target } = event
@@ -20,6 +21,9 @@ export const handleButtonsClick = event => {
       break
     case `edit`:
       console.log(`edit`)
+      showModalEdit()
+      break
+    case `save`:
       editTask(id)
       break
     case `delete`:

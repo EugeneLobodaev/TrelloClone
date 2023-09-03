@@ -17,7 +17,7 @@ export const assignButton = () => {
       description: taskText.value,
       stage: 'todo',
       user: selectTaskUser.value,
-      date: '08.08.2023',
+      date: new Date().toLocaleDateString(),
     }
     taskArr.push(taskObj)
     setLocalStorage(`tasks`, taskArr)
