@@ -20,6 +20,11 @@
   }
   &__controls {
     @include flexWrap(space-between, center);
+    @media (min-width: 600px){
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 10px;
+    }
     gap: 20px;
   }
   &__btn {
@@ -32,9 +37,12 @@
   }
   .task__desctription {
     text-align: justify;
-
   }
   &__footer {
     @include flexWrap(space-between, center);
+    @media (min-width: 600px){
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
   }
 }
