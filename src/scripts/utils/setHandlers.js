@@ -73,6 +73,7 @@ const setTasksHandlers = () => {
     warningModalWindow.querySelector(
       '.modal__text',
     ).textContent = `Are you sure you want to delete all tasks?`
+    warningModalWindow.dataset.delete = 'false'
   })
 }
 
