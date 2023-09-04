@@ -36,20 +36,20 @@ export function createTask(task) {
     const acceptButton = document.createElement(`button`)
     acceptButton.type = `button`
     acceptButton.className = `task__btn`
-    acceptButton.textContent = `Assign Task`
+    acceptButton.textContent = `Take`
     acceptButton.name = `assign`
 
     const editButton = document.createElement(`button`)
     editButton.type = `button`
     editButton.className = `task__btn`
     editButton.id = `task-button-edit`
-    editButton.textContent = `Edit Task`
+    editButton.textContent = `Edit`
     editButton.name = `edit`
 
     const deleteButton = document.createElement(`button`)
     deleteButton.type = `button`
     deleteButton.className = `task__btn`
-    deleteButton.textContent = `Delete Task`
+    deleteButton.textContent = `Delete`
     deleteButton.name = `delete`
 
     taskButtonsWrapper.append(acceptButton, editButton, deleteButton)

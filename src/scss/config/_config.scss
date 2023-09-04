@@ -9,6 +9,8 @@
 body {
   font-size: 20px;
   font-family: 'Norican', cursive;
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
 }
 
 input[type='text'],

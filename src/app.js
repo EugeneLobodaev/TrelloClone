@@ -1,25 +1,15 @@
 import './scss/index.scss'
-import {
-  updateTime,
-  renderTasks,
-  updateCounters,
-  assignButton,
-} from '../src/scripts/services/index'
-import {
-  addNewTask,
-  deleteAll,
-} from './scripts/EventListeners/handleButtonsClick'
-import tasks from '../tasksPlaceholdes'
-import { userList, userListEdit } from './scripts/utils/getUsers.js'
+import { updateTime, updateCounters, tasks } from './scripts/services'
+import { createSelectOptions } from './scripts/services/createSelectOptions'
+import setHandlers from './scripts/utils/setHandlers.js'
+
 const main = () => {
   updateTime()
-  addNewTask()
-  deleteAll()
-  renderTasks(tasks)
-  updateCounters(tasks)
-  assignButton()
-  userList()
-  userListEdit()
+  tasks.render()
+  updateCounters()
+  createSelectOptions()
+
+  setHandlers()
 }
 
 export default main
