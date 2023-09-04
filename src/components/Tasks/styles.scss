@@ -1,18 +1,13 @@
 @import '../../scss/config/index.scss';
-
 .task {
   border: $border;
-
-  &__header,
   &__footer,
   .task__desctription {
     padding: 15px;
   }
-
   &__header {
     margin-bottom: 10px;
     background-color: inherit;
-
     font-weight: bold;
   }
   &__title {
@@ -22,8 +17,10 @@
     @include flexWrap(space-between, center);
     @media (min-width: 600px){
       flex-wrap: wrap;
-      justify-content: space-around;
       padding: 10px;
+    }
+    @media (min-width: 900px){
+      flex-wrap: nowrap;
     }
     gap: 20px;
   }
@@ -32,6 +29,10 @@
     border-radius: $border-radius;
     text-align: center;
     padding: 5px 10px;
+    margin: 0px 10px 10px 10px;
+    @media (min-width: 600px){
+      margin: 0;
+    }
     font-weight: inherit;
     background-color: $button-color;
   }
@@ -42,7 +43,7 @@
     @include flexWrap(space-between, center);
     @media (min-width: 600px){
       flex-wrap: wrap;
-      justify-content: space-around;
+      justify-content: space-between;
     }
   }
 }
