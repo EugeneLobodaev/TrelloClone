@@ -34,8 +34,5 @@
     "sass": "^1.66.1",
     "vite": "^4.4.5",
     "vite-plugin-html-minifier": "^1.0.3"
-  },
-  "dependencies": {
-    "swiper": "^10.2.0"
   }
 }
