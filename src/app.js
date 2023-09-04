@@ -1,15 +1,15 @@
 import './scss/index.scss'
-import tasks from '../tasksPlaceholdes'
-import {
-  updateTime,
-  renderTasks,
-  updateCounters,
-} from '../src/scripts/services/index'
+import { updateTime, updateCounters, tasks } from './scripts/services'
+import { createSelectOptions } from './scripts/services/createSelectOptions'
+import setHandlers from './scripts/utils/setHandlers.js'
 
 const main = () => {
   updateTime()
-  renderTasks(tasks)
-  updateCounters(tasks)
+  tasks.render()
+  updateCounters()
+  createSelectOptions()
+
+  setHandlers()
 }
 
 export default main

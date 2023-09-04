@@ -2,10 +2,10 @@ import './styles.scss'
 export function createTask(task) {
   const taskItem = document.createElement(`li`)
   taskItem.classList.add(`tasks__list-item`)
-  taskItem.id = task.id
 
   const taskContainer = document.createElement(`article`)
   taskContainer.className = `task`
+  taskContainer.id = task.id
 
   const taskHeader = document.createElement(`header`)
   taskHeader.className = `task__header`
@@ -36,17 +36,21 @@ export function createTask(task) {
     const acceptButton = document.createElement(`button`)
     acceptButton.type = `button`
     acceptButton.className = `task__btn`
-    acceptButton.textContent = `Asign Task`
+    acceptButton.textContent = `Take`
+    acceptButton.name = `assign`
 
     const editButton = document.createElement(`button`)
     editButton.type = `button`
     editButton.className = `task__btn`
-    editButton.textContent = `Edit Task`
+    editButton.id = `task-button-edit`
+    editButton.textContent = `Edit`
+    editButton.name = `edit`
 
     const deleteButton = document.createElement(`button`)
     deleteButton.type = `button`
     deleteButton.className = `task__btn`
-    deleteButton.textContent = `Delete Task`
+    deleteButton.textContent = `Delete`
+    deleteButton.name = `delete`
 
     taskButtonsWrapper.append(acceptButton, editButton, deleteButton)
   }
@@ -55,11 +59,13 @@ export function createTask(task) {
     backButton.type = `button`
     backButton.className = `task__btn`
     backButton.textContent = `Unassign`
+    backButton.name = `unassign`
 
     const completeTask = document.createElement(`button`)
     completeTask.type = `button`
     completeTask.className = `task__btn`
     completeTask.textContent = `Completed!`
+    completeTask.name = `completed`
 
     taskButtonsWrapper.append(backButton, completeTask)
   }
@@ -69,6 +75,7 @@ export function createTask(task) {
     deleteButton.type = `button`
     deleteButton.className = `task__btn`
     deleteButton.textContent = `Clear`
+    deleteButton.name = `delete`
 
     taskButtonsWrapper.append(deleteButton)
   }

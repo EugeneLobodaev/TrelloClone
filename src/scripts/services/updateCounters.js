@@ -1,4 +1,7 @@
-export function updateCounters(tasks) {
+import { getLocalStorage } from '../utils/localStorage'
+
+export function updateCounters() {
+  const tasks = getLocalStorage(`tasks`)
   const tasksToDo = tasks.filter(task => task.stage === 'todo')
   const tasksInProgress = tasks.filter(task => task.stage === 'inprogress')
   const tasksDone = tasks.filter(task => task.stage === 'done')

@@ -6,7 +6,6 @@
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
 
   &__content {
     border: $border;
@@ -54,6 +53,11 @@
   }
 
   &__select {
+    option:nth-child(1) {
+      text-align: center;
+    }
+
+    width: 50%;
     border: $border;
     border-radius: $border-radius;
     padding: 10px 20px;

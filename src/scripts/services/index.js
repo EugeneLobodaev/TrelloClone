@@ -1,3 +1,5 @@
-export { renderTasks } from './renderTasks.js'
 export { updateTime } from './clock.js'
+export { setTaskButtonsHandlers } from '../utils/setHandlers.js'
 export { updateCounters } from './updateCounters.js'
+export * as tasks from './tasks/index.js'
+export { deleteAll } from './tasks/deleteAll.js'
