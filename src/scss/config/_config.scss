@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Noticia+Text&display=swap');
+
+.container {
+  max-width: 1220px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+body {
+  font-size: 20px;
+  font-family: 'Norican', cursive;
+  margin-right: calc(-1 * (100vw - 100%));
+  overflow-x: hidden;
+}
+
+input[type='text'],
+textarea {
+  border: $border;
+  border-radius: $border-radius;
+  background-color: white;
+  padding: 10px 20px;
+
+  &::placeholder {
+    color: #0000007c;
+  }
+}
+
+textarea {
+  white-space: pre-wrap;
+}
+
+button {
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  user-select: none;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+    opacity: 0.8;
+    background-color: $secondary-color;
+  }
+}
+
+.tasks__stage {
+  &[id='todo-stage'] {
+    .task__header,
+    .task__footer {
+      background-color: $todo-stage;
+    }
+  }
+
+  &[id='in-progress-stage'] {
+    .task__header,
+    .task__footer {
+      background-color: $in-progress-stage;
+    }
+  }
+
+  &[id='done-stage'] {
+    .task__header,
+    .task__footer {
+      background-color: $done-stage;
+    }
+  }
+}

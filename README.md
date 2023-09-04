@@ -6,18 +6,14 @@
 
 #### Не забываем выполнить команду
 
-```
-
+``` shell
 $ npm install
-
 ```
 
 ##### или
 
-```
-
+``` shell
 $ yarn
-
 ```
 
 ## Что важно✋
@@ -33,6 +29,8 @@ $ yarn
 #### Некоторые стили и скрипты `уже подключены`, подробнее немного дальше.
 
 #### Для написания стилей используем `SCSS`.
+
+#### [Нейминг коммитов](https://www.conventionalcommits.org/ru/v1.0.0/).
 
 #### Стили для компонентов подключаем `через JS`.
 
@@ -50,7 +48,7 @@ $ yarn
 
 #### Столкнулись с `проблем`? Что то `не получается`? Что то `непонятно`? Сообщайте будем разбираться
 
-#### Получилось? Супер!!! Делай PR соей `feature` ветки в `dev`
+#### Получилось? Супер!!! Делай PR (не зубудь lable `ready for review`) соей `feature` ветки в `dev`
 
 ## Структура проекта 👾
 
@@ -249,50 +247,38 @@ $ yarn
 
 #### Для того чтобы увидеть что вы сделали, да и просто при разработке
 
-```
-
+``` shell
 $ npm run dev
-
 ```
 
 или
 
-```
-
+``` shell
 $ yarn dev
-
 ```
 
 #### Перед коммитом
 
-```
-
+``` shell
 $ npm run lint:fix
-
 ```
 
 или
 
-```
-
+``` shell
 $ yarn lint:fix
-
 ```
 
 #### Для форматирования кода можете использовать
 
-```
-
+``` shell
 $ npm run format
-
 ```
 
 или
 
-```
-
+``` shell
 $ yarn format
-
 ```
 
 ## Что тут есть со старта❓
@@ -420,7 +406,10 @@ import { createMyComponent } from './components/index.js'
 
 ```javascript
 // app.js
-import { createMyComponent } from './components/index.js'
+import {
+  createMyComponent,
+  setHandlersMyComponent,
+} from './components/index.js'
 
 const main = () => {
   someElement.append(createMyComponent())
@@ -442,3 +431,86 @@ export const TASKS_STORAGE_KEY = 'tasks'
 #### Всегда сообщайте, если есть какие-то предложения по улудшению, или что что-то не получается.
 
 #### Ну что.... попробуем сделать этот диплом?
+
+## Убираем слабонервных от экранов
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+![photo_4_2023-09-04_06-18-22](https://github.com/DmitriyLasuta/trello/assets/66123004/6abc7444-d805-4e9d-82a8-de46908e4c9f)
+
+![photo_3_2023-09-04_06-18-22](https://github.com/DmitriyLasuta/trello/assets/66123004/3f802886-7de4-4ea4-9db7-50552bbd2257)
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+![photo_6_2023-09-04_06-18-22](https://github.com/DmitriyLasuta/trello/assets/66123004/049074cb-80a5-428e-930b-1225c13edecd)
+<br>
+<br>
+<br>
+<br><br>
+<br>
+
+![photo_5_2023-09-04_06-18-22](https://github.com/DmitriyLasuta/trello/assets/66123004/1d3769b1-fd5f-41de-b14c-0180b3a9fa5c)
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br>
+
+
+![photo_1_2023-09-04_06-18-22](https://github.com/DmitriyLasuta/trello/assets/66123004/a956a6c3-9a7b-4155-8c70-7523dec1a767)
+
+https://github.com/DmitriyLasuta/trello/assets/66123004/ef89fa4b-c19d-4c0e-8b27-53975f1dd674
+
+https://github.com/DmitriyLasuta/trello/assets/66123004/8b014dab-aad8-4da6-b73e-f453ee324b37
+
+
+
+

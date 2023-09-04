@@ -1,0 +1,38 @@
+{
+  "name": "trello",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "lint-staged": {
+    "*.js": "npx eslint ."
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "format": "prettier --write .",
+    "lint": "eslint . --ext .js, --quiet",
+    "lint:fix": "eslint . --ext .js, --fix",
+    "prepare": "husky install",
+    "lint-staged": "lint-staged"
+  },
+  "devDependencies": {
+    "eslint": "^8.0.1",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-config-standard": "^17.1.0",
+    "eslint-plugin-import": "^2.25.2",
+    "eslint-plugin-n": "^15.0.0 || ^16.0.0 ",
+    "eslint-plugin-prettier": "^5.0.0",
+    "eslint-plugin-promise": "^6.0.0",
+    "husky": "^8.0.3",
+    "prettier": "^3.0.2",
+    "sass": "^1.66.1",
+    "vite": "^4.4.5",
+    "vite-plugin-html-minifier": "^1.0.3"
+  }
+}
